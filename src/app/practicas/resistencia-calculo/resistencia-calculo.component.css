@@ -1,0 +1,11 @@
+option,
+td,
+select {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+img {
+  width: 350px;
+}

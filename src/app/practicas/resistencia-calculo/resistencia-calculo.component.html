@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="mb-3">
+      <h1 class="h1 text-center">CALCULO DE RESISTENCIA</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="mb-3">
+          <label class="form-label">BANDA 1</label>
+          <select class="form-select text-center" [(ngModel)]="banda1" [style.background-color]="color1">
+            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">{{
+              color.color }}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">BANDA 2</label>
+          <select class="form-select text-center" [(ngModel)]="banda2" [style.background-color]="color2">
+            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">{{
+              color.color }}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">BANDA 3</label>
+          <select class="form-select text-center" [(ngModel)]="banda3" [style.background-color]="color3">
+            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">{{
+              color.color }}</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="dorado" value="0.05" [(ngModel)]="tolerancia">
+            <label class="form-check-label" for="dorado">
+              Dorado
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="plateado" value="0.1" [(ngModel)]="tolerancia">
+            <label class="form-check-label" for="plateado">
+              Plateado
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="https://sdindustrial.com.mx/wp-content/uploads/2022/09/codigos-colores-resistencias.png.webp"
+          alt="RESISTENCIA">
+      </div>
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-outline-dark col-lg-6" (click)="calcularResistencia()">CALCULAR</button>
+    </div>
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th scope="col">BANDA1</th>
+          <th scope="col">BANDA2</th>
+          <th scope="col">BANDA3</th>
+          <th scope="col">TOLERANCIA</th>
+          <th scope="col">VALOR</th>
+          <th scope="col">MAXIMO</th>
+          <th scope="col">MINIMO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td [style.background-color]="color1" class="text-light">{{ color1 }}</td>
+          <td [style.background-color]="color2" class="text-light">{{ color2 }}</td>
+          <td [style.background-color]="color3" class="text-light">{{ color3 }}</td>
+          <td [style.background-color]="colorTolerancia" class="text-light">{{ colorTolerancia }}</td>
+          <td>{{ valorNominal }}</td>
+          <td>{{ maximo }}</td>
+          <td>{{ minimo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
