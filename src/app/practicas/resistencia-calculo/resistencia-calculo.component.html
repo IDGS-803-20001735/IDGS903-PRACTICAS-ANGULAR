@@ -8,25 +8,26 @@
         <div class="mb-3">
           <label class="form-label">BANDA 1</label>
           <select class="form-select text-center" [(ngModel)]="banda1" [style.background-color]="color1">
-            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">{{
-              color.color }}</option>
+            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">
+              {{ color.nombre }}</option>
           </select>
         </div>
         <div class="mb-3">
           <label class="form-label">BANDA 2</label>
           <select class="form-select text-center" [(ngModel)]="banda2" [style.background-color]="color2">
-            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">{{
-              color.color }}</option>
+            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">
+              {{ color.nombre }}</option>
           </select>
         </div>
         <div class="mb-3">
           <label class="form-label">BANDA 3</label>
           <select class="form-select text-center" [(ngModel)]="banda3" [style.background-color]="color3">
-            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">{{
-              color.color }}</option>
+            <option *ngFor="let color of colorBandas" [value]="color.valor" [style.background-color]="color.color">
+              {{ color.nombre }}</option>
           </select>
         </div>
         <div class="row">
+          <label class="form-label">TOLERANCIA</label>
           <div class="form-check">
             <input class="form-check-input" type="radio" id="dorado" value="0.05" [(ngModel)]="tolerancia">
             <label class="form-check-label" for="dorado">
@@ -63,10 +64,10 @@
       </thead>
       <tbody>
         <tr>
-          <td [style.background-color]="color1" class="text-light">{{ color1 }}</td>
-          <td [style.background-color]="color2" class="text-light">{{ color2 }}</td>
-          <td [style.background-color]="color3" class="text-light">{{ color3 }}</td>
-          <td [style.background-color]="colorTolerancia" class="text-light">{{ colorTolerancia }}</td>
+          <td [style.background-color]="color1" class="text-light"></td>
+          <td [style.background-color]="color2" class="text-light"></td>
+          <td [style.background-color]="color3" class="text-light"></td>
+          <td [style.background-color]="colorTolerancia" class="text-light"></td>
           <td>{{ valorNominal }}</td>
           <td>{{ maximo }}</td>
           <td>{{ minimo }}</td>

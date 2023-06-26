@@ -8,18 +8,18 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 })
 export class ResistenciaCalculoComponent {
   colorBandas = [
-    { color: 'black', valor: 0 },
-    { color: 'brown', valor: 1 },
-    { color: 'red', valor: 2 },
-    { color: 'orange', valor: 3 },
-    { color: 'yellow', valor: 4 },
-    { color: 'green', valor: 5 },
-    { color: 'blue', valor: 6 },
-    { color: 'violet', valor: 7 },
-    { color: 'gray', valor: 8 },
-    { color: 'white', valor: 9 },
-    { color: 'darkgoldenrod', valor: 0.05 },
-    { color: 'silver', valor: 0.1 },
+    { color: '#17202A', valor: 0, nombre: 'NEGRO' },
+    { color: '#935116', valor: 1, nombre: 'MARRÓN' },
+    { color: '#EF5350', valor: 2, nombre: 'ROJO' },
+    { color: '#FFA726', valor: 3, nombre: 'NARANJA' },
+    { color: '#F7DC6F', valor: 4, nombre: 'AMARILLO' },
+    { color: '#58D68D', valor: 5, nombre: 'VERDE' },
+    { color: '#4FC3F7', valor: 6, nombre: 'AZUL' },
+    { color: '#D7BDE2', valor: 7, nombre: 'VIOLETA' },
+    { color: '#7B7D7D', valor: 8, nombre: 'GRIS' },
+    { color: '#FFFFFF', valor: 9, nombre: 'BLANCO' },
+    { color: '#B8860B', valor: 0.05, nombre: 'DORADO' },
+    { color: '#C0C0C0', valor: 0.1, nombre: 'PLATEADO' },
   ];
 
   banda1!: number;
@@ -44,7 +44,10 @@ export class ResistenciaCalculoComponent {
       (e) => e.valor == this.tolerancia
     )?.color;
 
-    this.valorNominal = (this.banda1 * 10 + this.banda2) * 10 ** this.banda3;
+    let valor1 = this.banda1 + this.banda2;
+    let valor2 = this.banda3;
+
+    this.valorNominal = valor1 * Math.pow(10, valor2);
 
     if (this.tolerancia == 0.05) {
       this.maximo = this.valorNominal + this.valorNominal * 0.05;
