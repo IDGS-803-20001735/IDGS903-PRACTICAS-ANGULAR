@@ -14,11 +14,11 @@ export class ResistenciaCalculoComponent {
     { color: '#FFA726', valor: 3, nombre: 'NARANJA' },
     { color: '#F7DC6F', valor: 4, nombre: 'AMARILLO' },
     { color: '#58D68D', valor: 5, nombre: 'VERDE' },
-    { color: '#4FC3F7', valor: 6, nombre: 'AZUL' },
+    { color: '#0066CC', valor: 6, nombre: 'AZUL' },
     { color: '#D7BDE2', valor: 7, nombre: 'VIOLETA' },
     { color: '#7B7D7D', valor: 8, nombre: 'GRIS' },
     { color: '#FFFFFF', valor: 9, nombre: 'BLANCO' },
-    { color: '#B8860B', valor: 0.05, nombre: 'DORADO' },
+    { color: '#D4AF37', valor: 0.05, nombre: 'DORADO' },
     { color: '#C0C0C0', valor: 0.1, nombre: 'PLATEADO' },
   ];
 

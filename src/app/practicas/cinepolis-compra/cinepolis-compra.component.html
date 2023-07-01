@@ -1,6 +1,6 @@
 <div class="container_form">
   <div class="form">
-    <h1>DISTANCIA ENTRE DOS PUNTOS</h1>
+    <h1>CINEPOLIS</h1>
     <mat-form-field>
       <input type="text" matInput placeholder="NOMBRE" [(ngModel)]="nombre">
     </mat-form-field>
@@ -10,7 +10,6 @@
     <mat-form-field>
       <input type="number" matInput placeholder="NÚMERO DE BOLETOS" [(ngModel)]="numBoletos">
     </mat-form-field>
-
     <mat-radio-group name="opciones" [(ngModel)]="tarjeta">
       <mat-label class="mat-primary">DESCUENTO CON TARJETA:</mat-label>
       <mat-radio-button name="opciones" value="SI">
@@ -20,7 +19,7 @@
         NO
       </mat-radio-button>
     </mat-radio-group>
-    <button mat-raised-button color="success" (click)="procesarCompra()">PAGAR BOLETOS</button>
+    <button mat-raised-button color="primary" (click)="procesarCompra()">PAGAR BOLETOS</button>
   </div>
   <div class="result">
     <h2>
